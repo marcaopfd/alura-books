@@ -1,0 +1,311 @@
+@import url("/styles/header.css");
+@import url("/styles/carrossel.css");
+@import url("/styles/cards.css");
+@import url("/styles/topicos.css");
+@import url("contato.css");
+@import url("/styles/footer.css");
+
+
+:root {
+    --color-azul: #002F52;
+    --color-cinza: #EBECEE;
+    --color-laranja: #EB9B00;
+    --color-branco: #FFFFFF;
+    --color-preto: #000000;
+    --fonte-principal:  "Poppins", serif;
+    --fonte-negrito: 700;
+    --fonte-regular: 400;
+    --fonte-medio: 500;
+    --azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --fonte-nova: "Josefin Sans", serif;
+
+}
+
+body{
+    background-color: var(--color-cinza);
+}
+/*
+.menu__header{
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-branco);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header__listra{
+    width: 35px;
+    height: 5px;
+    background-color: var(--color-azul);
+}
+*/
+
+.header {
+    background-color: var(--color-branco);
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 5%;
+    height: 80px;
+    align-items: center;
+}
+
+.header__icones{
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.header__icones2{
+    display: flex;
+    gap: 10%;
+    align-items: center;
+    justify-content: end;
+}
+
+.header__titulo{
+    display: none;
+}
+
+.container__botao:checked~ .container__rotulo > .hamburguer__header {
+    background-image: url("/assets/Menu\ Aberto.svg");
+}
+
+.container__botao:checked~.container__rotulo{
+    background: var(--azul-degrade);
+}
+
+.opcoes__botao:checked~ .container__categoria>.categorias__menu{
+    color: var(--color-branco);
+    background-color: var(--color-azul);
+}
+
+.lista__menu__item:hover{
+    background-color: var(--color-azul);
+}
+.item__lista:hover{
+    color: var(--color-branco);
+}
+
+
+/* agora eh tudo do banner ---------------------- */
+
+.banner{
+    background-color: var(--color-azul);
+    height: 15em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+}
+
+.banner__titulo{
+    color: var(--color-branco);
+    font-size: 18px;
+    text-align: center;
+    font-family: var(--fonte-principal);
+    font-weight: var(--fonte-negrito);
+    
+}
+
+.banner__texto{
+    color: var(--color-branco);
+    font-size: 1rem;
+    width: 80%;
+    text-align: center;
+    font-family: var(--fonte-principal);
+    font-weight: var(--fonte-medio);
+}
+
+.a__texto{
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--color-branco);
+    font-family: var(--fonte-principal);
+    font-weight: var(--fonte-regular);
+    font-size: 0.6em;
+    width: 85%;
+    border: none;
+}
+
+.a__texto::placeholder{
+    font-family: var(--fonte-principal);
+    font-weight: var(--fonte-medio);
+    font-size: 1.3em;
+    text-decoration: none;
+    color: var(--color-branco); 
+}
+
+.banner__lupa{
+    border: solid #C4C4C4 1px;
+    display: flex;
+    border-radius: 24px;
+    width: 80%;
+    height: 15%;
+    gap: 5%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5em;
+    max-width: auto;
+    max-width: 400px;
+}
+.a__imagem{
+    height: 50%;
+}
+
+.categorias__header{
+    display: none;
+}
+
+.footer__lista{
+    display: none;
+}
+
+/* agora eh tudo do titulo1 ---------------------- */
+
+@media (min-width: 1024px){
+    .header__icones{
+        gap: 10px;
+    }
+    .header__titulo, .header__titulo--negrito{
+        font-family: var(--fonte-nova);
+        font-size: 30px;
+    }
+    
+    .header__titulo{
+        display: block;
+        font-weight: 300;
+    }
+    
+    .header__titulo--negrito{
+        font-weight: 700;
+    }
+
+    .categorias__header{
+        display: flex;
+        list-style-type: none;
+        width: 60%;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+    }
+
+    .abas__header{
+        height: 50px;
+        background-color: var(--color-branco);
+        display: flex;
+        align-items: center;
+        padding: 10px 32px 10px 10px;
+    }
+
+    .aba__botao{
+        font-family: var(--fonte-principal);
+        text-decoration: none;
+        color: var(--color-preto);
+        font-size: 16px;
+    }
+
+    .categorias__menu{
+        font-family: var(--fonte-principal);
+        text-decoration: none;
+        color: var(--color-preto);
+        font-size: 16px;
+    }
+
+    .favorito__icone{
+        display: none;
+    }
+
+    .header__icones2{
+        gap: 50px;
+    }
+
+    .header__menu{
+        display: none;
+    }
+
+    .opcoes__botao:checked~.lista__menu{
+        display: block;
+        position: absolute;
+        left: 350px;
+    }
+
+    .opcoes__botao{
+        display: none;
+    }
+
+    .contato{
+        display: grid;
+        grid-template-columns: 40% 40%;
+        padding: 2em 2em 2em 5em;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contato__container{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 10%;
+    }
+
+    .footer__links{
+        color: var(--color-preto);
+        text-decoration: none;
+        font-family: var(--fonte-principal);
+        
+    }
+
+    .footer__lista{
+        background-color: var(--color-branco);
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px 0 0 24px;
+    }
+
+    .footer__lista__links{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background-color: var(--color-branco);
+    }
+
+    .footer__lista__titulo{
+        font-family: var(--fonte-principal);
+        color: #858585;
+    }
+
+    .footer{
+        padding: 1em 2em;
+        display: flex;
+        gap: 8%;
+        height: auto;
+    }
+
+    .banner__titulo{
+        font-size: 36px;
+    }
+    .lista__traco{
+        display: flex;
+    }
+}
+
+
+@media screen and (min-width: 1728px){
+
+    .footer{
+        gap: 14%;
+    }
+
+    .categorias__header{
+        justify-content: flex-start;
+    }
+}
